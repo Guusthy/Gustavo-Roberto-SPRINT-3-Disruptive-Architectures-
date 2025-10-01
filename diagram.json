@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "author": "meu_projeto",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -152.1, "left": -205.7, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic2", "top": -152.1, "left": 63.1, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 63.6,
+      "left": -188.2,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 63.6,
+      "left": -111.4,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "ultrasonic1:GND", "esp:GND.1", "black", [ "v48", "h229.2", "v163.2" ] ],
+    [ "ultrasonic2:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "ultrasonic1:TRIG", "esp:D5", "green", [ "v38.4", "h258.8", "v115.2" ] ],
+    [ "esp:D18", "ultrasonic1:ECHO", "green", [ "h13.91", "v-117.92", "h-230.4" ] ],
+    [ "esp:D19", "ultrasonic2:TRIG", "green", [ "h42.71", "v-2.72" ] ],
+    [ "esp:D21", "ultrasonic2:ECHO", "green", [ "h0" ] ],
+    [ "ultrasonic2:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "ultrasonic1:VCC", "esp:3V3", "red", [ "v28.8", "h307.2", "v182.4" ] ],
+    [ "led2:C", "esp:GND.2", "green", [ "v0" ] ],
+    [ "led1:C", "esp:GND.2", "green", [ "v0" ] ],
+    [ "led2:A", "esp:D12", "green", [ "v0" ] ],
+    [ "led1:A", "esp:D14", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
