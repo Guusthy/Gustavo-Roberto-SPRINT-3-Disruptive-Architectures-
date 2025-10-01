@@ -78,3 +78,8 @@ Valores instantâneos de distância de cada sensor.
 Gráficos de histórico (tempo real).
 
 O sistema funciona tanto em simulação (Wokwi) quanto em hardware real.
+
+
+- LINK DO VIDEO:
+
+https://youtu.be/BrUIUD2w6ak?si=dk4GCKPA4ANSjakT
